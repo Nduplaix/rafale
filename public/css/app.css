@@ -12,4 +12,11 @@ footer {
     justify-content: space-around;
     align-items: center;
     height: 50px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+body {
+    min-height: 100vh;
 }
