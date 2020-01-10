@@ -1,0 +1,15 @@
+.navbar {
+    z-index: 100000;
+}
+
+.logo {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+}

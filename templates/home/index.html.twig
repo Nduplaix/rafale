@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Achète un rafale en ligne!
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('/css/home.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="image-background">
+    <div class="image-background__image"><img src="{{ asset('/images/rafale.jpg') }}" alt="image d'un rafale"></div>
+    <div class="image-background__content">
+        <div>
+            <h1>Bienvenue sur</h1>
+            <h1>Achète un rafale en ligne ! </h1>
+        </div>
+    </div>
+</div>
+<div class="page-content container py-5">
+    <h1 class="text-center">Pourquoi existons nous?</h1>
+    <div class="text-center mt-3">
+        <p>Voyez vous régulièrement des personnes sortir en famille le week-end avec leur rafale? Nous non!</p>
+        <p>Or nous estimons que ça devrait être possible! Nous nous sommes donc posé la question: "Comment acheter son propre rafale?</p>
+        <p>La réponse est à peu de choses près: "C'est impossible"! C'est injuste! Tout le monde devrait pouvoir acheter son rafale pour sortir en famille !</p>
+        <p>Voila pourquoi nous avons créé ce site! Alors n'hésitez plus! Faites vous plaisir !</p>
+        <p><a href="#" class="btn btn-success">Choisir mon rafale !</a></p>
+    </div>
+</div>
+{% endblock %}
