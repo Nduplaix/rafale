@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Basket;
 use App\Entity\User;
 use App\Form\RegisterType;
 use Doctrine\ORM\EntityManagerInterface;
@@ -59,6 +60,14 @@ class SecurityController extends AbstractController
             $plainPassword = $user->getPassword();
             $hashPassword = $passwordEncoder->encodePassword($user, $plainPassword);
             $user->setPassword($hashPassword);
+
+            $basket = new Basket();
+
+            $basket->setUser($user)
+                ->setTotalPrice(0);
+
+            $em->persist($basket);
+            $user->setBasket($basket);
 
             $em->persist($user);
             $em->flush();
